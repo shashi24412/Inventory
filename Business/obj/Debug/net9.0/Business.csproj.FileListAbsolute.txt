@@ -1,0 +1,16 @@
+/home/shashi/OtherProject/Inventory/Business/bin/Debug/net9.0/Business.deps.json
+/home/shashi/OtherProject/Inventory/Business/bin/Debug/net9.0/Business.dll
+/home/shashi/OtherProject/Inventory/Business/bin/Debug/net9.0/Business.pdb
+/home/shashi/OtherProject/Inventory/Business/bin/Debug/net9.0/Data.dll
+/home/shashi/OtherProject/Inventory/Business/bin/Debug/net9.0/Data.pdb
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.csproj.AssemblyReference.cache
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.GeneratedMSBuildEditorConfig.editorconfig
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.AssemblyInfoInputs.cache
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.AssemblyInfo.cs
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.csproj.CoreCompileInputs.cache
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.sourcelink.json
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.csproj.Up2Date
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.dll
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/refint/Business.dll
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/Business.pdb
+/home/shashi/OtherProject/Inventory/Business/obj/Debug/net9.0/ref/Business.dll
