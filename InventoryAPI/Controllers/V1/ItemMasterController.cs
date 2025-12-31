@@ -25,7 +25,6 @@ public class ItemMasterController : ControllerBase
     [HttpPost("GetItemMaster")]
     public async Task<ActionResult> GetItemMaster([FromBody] INVM_ItemMasterViewModel request)
     {
-
         var result = await _itemMasterManager.GetItemMasterAsync(request.Id);
         //throw new Exception("Test exception handling middleware");
         return Ok(result);
