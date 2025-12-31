@@ -1,9 +1,11 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InventoryAPI.Controllers;
+namespace InventoryAPI.Controllers.v1;
 
 [ApiController]
-[Route("[controller]")]
+[ApiVersion("2.0")]
+[Route("api/v{version:apiVersion}/[Controller]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
