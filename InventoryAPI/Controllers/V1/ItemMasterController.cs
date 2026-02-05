@@ -25,7 +25,6 @@ public class ItemMasterController : ControllerBase
     [HttpPost("GetItemMaster")]
     public async Task<ActionResult> GetItemMaster([FromBody] INVM_ItemMasterViewModel request)
     {
-
         var result = await _itemMasterManager.GetItemMasterAsync(request.Id);
         //throw new Exception("Test exception handling middleware");
         return Ok(result);
@@ -43,7 +42,13 @@ public class ItemMasterController : ControllerBase
         //     Strength = "500mg",
         //     PackSize = 30
         // })); 
-
+        // add feature comment
+    }
+    [HttpPost]
+    public async Task<ActionResult> InsertItem([FromBody] INVM_ItemMasterViewModel request)
+    {
+        var result = await _itemMasterManager.InsertDataAsync(request);
+        return Ok(result);
     }
 
 }

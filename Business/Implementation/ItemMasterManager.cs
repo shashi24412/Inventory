@@ -23,5 +23,10 @@ public class ItemMasterManager : I_ItemMasterManager
         var vModule = _mapper.Map<IEnumerable<INVM_ItemMasterViewModel>>(itemMaster);
         return vModule;
     }
+    public async Task<bool> InsertDataAsync(INVM_ItemMasterViewModel item)
+    {
+        var data = _mapper.Map<INVM_ItemMaster>(item);
+        return await _itemMasterRepository.InsertDataAsync(data);
+    }
 }
 

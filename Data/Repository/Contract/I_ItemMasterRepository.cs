@@ -4,5 +4,6 @@ namespace Data.Contract;
 
 public interface I_ItemMasterRepository
 {
-    public Task<IEnumerable<INVM_ItemMaster>> GetItemMasterByIdAsync(int id);
+    Task<IEnumerable<INVM_ItemMaster>> GetItemMasterByIdAsync(int id);
+    Task<bool> InsertDataAsync(INVM_ItemMaster item);
 }
