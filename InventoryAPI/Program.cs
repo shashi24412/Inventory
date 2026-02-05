@@ -1,5 +1,7 @@
 using System.Threading.RateLimiting;
 using Asp.Versioning;
+using Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
@@ -78,6 +80,13 @@ builder.Services.AddRateLimiter(option =>
 builder.Services.AddScoped<Business.Contract.I_ItemMasterManager, Business.Implementation.ItemMasterManager>();
 builder.Services.AddScoped<Data.Contract.I_ItemMasterRepository, Data.Repository.ItemMasterRepository>();
 
+var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
+
+builder.Services.AddDbContext<DBContext>(options =>
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString)
+    ));
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

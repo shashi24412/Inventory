@@ -44,5 +44,11 @@ public class ItemMasterController : ControllerBase
         // })); 
         // add feature comment
     }
+    [HttpPost]
+    public async Task<ActionResult> InsertItem([FromBody] INVM_ItemMasterViewModel request)
+    {
+        var result = await _itemMasterManager.InsertDataAsync(request);
+        return Ok(result);
+    }
 
 }
