@@ -73,5 +73,25 @@ ENTRYPOINT ["dotnet", "InventoryAPI.dll"]
 # docker run -d -p 5000:5000 --name inventoryapi inventoryapi
 
 
+# docker build -t inventoryapi:1.1 .  /// here . is current directory where dockerfile is located
 
 # docker push shashiprasad91/inventoryapi:latest
+
+
+# What is WORKDIR?
+
+# WORKDIR sets the default directory inside the container where:
+
+# RUN
+
+# COPY
+
+# ADD
+
+# CMD
+
+# ENTRYPOINT
+
+# will execute.
+
+#thinking like 1. cd /app then 2. copy.. >> run dotnet build >> 3. dotnet publish 4. dotnet run 
