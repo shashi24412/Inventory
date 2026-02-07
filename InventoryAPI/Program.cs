@@ -80,7 +80,17 @@ builder.Services.AddRateLimiter(option =>
 builder.Services.AddScoped<Business.Contract.I_ItemMasterManager, Business.Implementation.ItemMasterManager>();
 builder.Services.AddScoped<Data.Contract.I_ItemMasterRepository, Data.Repository.ItemMasterRepository>();
 
-var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
+var connectionString =
+    $"Server={Environment.GetEnvironmentVariable("DB_HOST")};" +
+    $"Port={Environment.GetEnvironmentVariable("DB_PORT")};" +
+    $"Database={Environment.GetEnvironmentVariable("DB_NAME")};" +
+    $"User={Environment.GetEnvironmentVariable("DB_USER")};" +
+    $"Password={Environment.GetEnvironmentVariable("DB_PASSWORD")};" +
+    $"AllowPublicKeyRetrieval=True;" +
+    $"SslMode=None;";
+
+// var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
+Console.WriteLine($"Connection String: {connectionString}");
 
 builder.Services.AddDbContext<DBContext>(options =>
     options.UseMySql(
