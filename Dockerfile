@@ -51,6 +51,8 @@ COPY Data/Data.csproj Data/
 
 # Restore dependencies
 RUN dotnet restore InventoryAPI/InventoryAPI.csproj
+RUN dotnet restore Business/Business.csproj
+RUN dotnet restore Data/Data.csproj
 
 # Copy remaining source code
 COPY . .
