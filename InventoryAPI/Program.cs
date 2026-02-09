@@ -138,6 +138,16 @@ builder.Services.AddApiVersioning(options =>
 var app = builder.Build();
 
 app.UseExceptionHandler(x => { });
+
+if (args.Contains("--migrate"))
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<DBContext>();
+    db.Database.Migrate();
+    return;
+}
+
+
 app.UseRateLimiter();
 app.UseSwagger();
 app.UseSwaggerUI(options =>
